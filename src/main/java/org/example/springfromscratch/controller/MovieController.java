@@ -1,5 +1,6 @@
 package org.example.springfromscratch.controller;
 
+import org.example.springfromscratch.model.dto.MovieDTO;
 import org.example.springfromscratch.service.MovieService;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -15,7 +16,9 @@ public class MovieController {
     }
 
     @GetMapping("/")
-    public String index() {
+    public String index() throws Exception {
+
+        MovieDTO movie = movieService.getMovie();
         return "index";
     }
 
