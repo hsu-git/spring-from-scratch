@@ -1,5 +1,6 @@
 package org.example.springfromscratch.service;
 
+import org.example.springfromscratch.model.repository.MovieRepository;
 import org.springframework.stereotype.Service;
 
 @Service
